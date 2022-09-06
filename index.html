@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onSubmit="doSUm(); return false">
+        num1 <input id="num1" type="text" placeholder="Enter a Number" required>
+        <br>
+        num2 <input id="num2" type="text" placeholder="Enter 2nd Number" required>
+        <br>
+        operation <input id="operation" type="text" placeholder="+ - * /" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <h1 id="result"></h1>
+
+
+    <script>
+        function doSUm() {
+            let num1 = +document.querySelector("#num1").value
+            let num2 = +document.querySelector("#num2").value
+            let operation = +document.querySelector("#operation").value
+
+            let resultElement = document.querySelector("#result")
+
+            if (operation ==="+"){
+             resultElement.innerHTML = num1 + num2 
+            } else if (operation ==="-"){
+             resultElement.innerHTML = num1 - num2
+            }else if (operation ==="*"){
+                resultElement.innerHTML = num1 * num2
+            } else if (operation ==="/"){
+
+                if (num2 === 0){
+                    resultElement.innerHTML = "Cannot divide by 0"
+                }else {
+                resultElement.innerHTML = num1 / num2 
+            }
+            } else{
+                resultElement.innerHTML = "invalid operation"
+            }
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
