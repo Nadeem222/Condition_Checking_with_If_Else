@@ -5,43 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(240, 247, 252);
+    
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(138, 151, 200);
+            width: 30%;
+            height: 45vh;
+            /* border: solid rgb(103, 92, 8); */
+            margin: auto;
+            text-decoration: rgba(0, 255, 255, 0.31);
+        }
+
+    </style>
+
 </head>
 <body>
-    <form onSubmit="doSUm(); return false">
-        num1 <input id="num1" type="text" placeholder="Enter a Number" required>
+    <div>
+    <h1>Condition checking if else</h1>
+    <br>
+    <form onsubmit="doSum(); return false">
+        number1  : <input id="num1" type="number" placeholder="Enter a Number" required>
         <br>
-        num2 <input id="num2" type="text" placeholder="Enter 2nd Number" required>
+        number2  : <input id="num2" type="number" placeholder="Enter 2nd Number" required>
         <br>
-        operation <input id="operation" type="text" placeholder="+ - * /" required>
+        operation: <input id="operation" type="text" placeholder="Enter + - * /" required>
         <br>
         <button type="submit">Submit</button>
     </form>
-    <h1 id="result"></h1>
+    <h1 id="result">    </h1>
+</div>
 
 
     <script>
-        function doSUm() {
-            let num1 = +document.querySelector("#num1").value
-            let num2 = +document.querySelector("#num2").value
-            let operation = +document.querySelector("#operation").value
+        function doSum() {
+            let number1 = +document.querySelector("#num1").value
+            let number2 = +document.querySelector("#num2").value
+            let operation = document.querySelector("#operation").value
 
             let resultElement = document.querySelector("#result")
 
-            if (operation ==="+"){
-             resultElement.innerHTML = num1 + num2 
-            } else if (operation ==="-"){
-             resultElement.innerHTML = num1 - num2
-            }else if (operation ==="*"){
-                resultElement.innerHTML = num1 * num2
-            } else if (operation ==="/"){
+            if (operation === "+"){
+             resultElement.innerHTML = number1 + number2 
+            } else if (operation === "-"){
+             resultElement.innerHTML = number1 - number2
+            }else if (operation === "*"){
+                resultElement.innerHTML = number1 * number2
+            } else if (operation === "/"){
 
                 if (num2 === 0){
                     resultElement.innerHTML = "Cannot divide by 0"
                 }else {
-                resultElement.innerHTML = num1 / num2 
+                resultElement.innerHTML = number1 / number2 
             }
             } else{
-                resultElement.innerHTML = "invalid operation"
+                resultElement.innerHTML = "Invalid Operation"
             }
 
 
