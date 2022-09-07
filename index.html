@@ -7,27 +7,50 @@
     <title>Document</title>
     <style>
         body {
-            background-color: rgb(240, 247, 252);
+            background-color: rgba(255, 255, 255, 0.523);
     
+        }
+        section {
+            border-radius: solid gray;
+            height: 90vh;
+
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         div {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgb(138, 151, 200);
-            width: 30%;
+            background-color: rgb(7, 34, 135);
+            width: 25%;
             height: 45vh;
             /* border: solid rgb(103, 92, 8); */
             margin: auto;
-            text-decoration: rgba(0, 255, 255, 0.31);
+            color: rgb(248, 205, 50);
+            border-radius: 22px;
+        }
+        button {
+            padding: 7px 14px;
+            border-radius: 22px;
+            color: white;
+            background-color: rgb(97, 23, 8);
+            text-decoration-style: solid;
+            margin-top: 20px;
+
+        }
+        form {
+            padding: 10px;
         }
 
     </style>
 
 </head>
 <body>
+    <section>
     <div>
-    <h1>Condition checking if else</h1>
+    <h1>Condition Checking If Else</h1>
     <br>
     <form onsubmit="doSum(); return false">
         number1  : <input id="num1" type="number" placeholder="Enter a Number" required>
@@ -40,6 +63,7 @@
     </form>
     <h1 id="result">    </h1>
 </div>
+</section>
 
 
     <script>
